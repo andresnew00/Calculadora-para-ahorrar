@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+	Eventually by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Eventually by HTML5 UP</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body class="is-preload">
+    <div class="organizer-wrapper">
+      <div class="section">
+        <!-- Header -->
+        <header id="header">
+          <h1>Calculadora de Cuentas marca Puchium</h1>
+          <p>
+            Una simple calculadora que ayudara a la puchium con sus finanzas.
+          </p>
+        </header>
+
+        <!-- Signup Form -->
+        <form id="signup-form" method="post" action="#">
+          <input
+            type="monto"
+            name="monto"
+            id="monto"
+            placeholder="Cantidad del Cheque"
+          />
+          <input type="submit" id="calcular" value="Calcular" />
+          <span id="alert"></span>
+        </form>
+      </div>
+
+      <!-- results area -->
+      <div class="results-wrapper">
+        <div class="results">
+          <h1>PLP (O sea Para La Puchium):</h1>
+          <h2>$ <span id="puchium">0</span></h2>
+          <h1>Transferencia a Papa:</h1>
+          <h2>$ <span id="papa">0</span></h2>
+          <h1>Ahorros:</h1>
+          <h2>$ <span id="ahorros">0</span></h2>
+          <h1>Inversion:</h1>
+          <h2>$ <span id="inversion">0</span></h2>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/calculator.js"></script>
+  </body>
+</html>
