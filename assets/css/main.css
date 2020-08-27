@@ -1221,6 +1221,12 @@ h2 {
   color: #b76c77;
 }
 
+span {
+  color: #e08693;
+  font-size: 1em;
+  align-self: center;
+}
+
 @media screen and (max-width: 800px) {
   .organizer-wrapper {
     flex-direction: column;
