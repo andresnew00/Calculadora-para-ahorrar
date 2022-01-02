@@ -1,40 +1,27 @@
-function calculate() {
+const calculate = () => {
   let paymentAmount = document.getElementById("monto").value;
+  let AmountToPayDad = document.getElementById("papaPayment").value;
 
-  // return
-  let puchium = 0;
-  let inversionesYahorros = 0;
-  let = 0;
+  AmountToPayDad
+    ? (document.getElementById("papa").innerHTML = AmountToPayDad)
+    : (document.getElementById("papa").innerHTML = 0);
 
-  if (paymentAmount < 100) {
-    document.getElementById("alert").innerHTML =
-      "No es suficiente dinero para calcular";
-  }
+  // removing the 100 from dad
+  paymentAmount = paymentAmount - AmountToPayDad;
 
-  if (paymentAmount == 100) {
-    document.getElementById("alert").innerHTML = "Solo basta para pagar a papa";
-    document.getElementById("papa").innerHTML = 100.00;
-  }
+  // calculate 40% puchium
+  const forPuchium = (paymentAmount * 0.4).toFixed(2);
 
-  if (paymentAmount > 100) {
-    document.getElementById("papa").innerHTML = 100.00;
+  //calculate 60% ahorros + inversiones
+  const inversiones = ((paymentAmount - forPuchium) * 0.4).toFixed(2);
+  const ahorros = ((paymentAmount - forPuchium) * 0.6).toFixed(2);
 
-    // removing the 100 from dad
-    paymentAmount = paymentAmount - 100;
+  document.getElementById("puchium").innerHTML = forPuchium;
+  document.getElementById("ahorros").innerHTML = ahorros;
+  document.getElementById("inversion").innerHTML = inversiones;
+};
 
-    // calculate 40% puchium
-    puchium = (paymentAmount * 0.4).toFixed(2);
-
-    //calculate 30% ahorros + inversiones
-    inversionesYahorros = (paymentAmount * 0.3).toFixed(2);
-
-    document.getElementById("puchium").innerHTML = puchium;
-    document.getElementById("ahorros").innerHTML = inversionesYahorros;
-    document.getElementById("inversion").innerHTML = inversionesYahorros;
-  }
-}
-
-document.getElementById("calcular").onclick = function () {
+document.getElementById("calcular").onclick = function calculateSavings() {
   document.getElementById("papa").innerHTML = 0;
   document.getElementById("puchium").innerHTML = 0;
   document.getElementById("ahorros").innerHTML = 0;
