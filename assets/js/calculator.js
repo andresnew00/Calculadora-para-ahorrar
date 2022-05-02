@@ -9,8 +9,11 @@ const calculate = () => {
   // removing the 100 from dad
   paymentAmount = paymentAmount - AmountToPayDad;
 
-  // calculate 40% puchium
-  const forPuchium = (paymentAmount * 0.4).toFixed(2);
+  // calculate 35% puchium
+  const forPuchium = (paymentAmount * 0.35).toFixed(2);
+
+  // calculate 5% ahorros de viaje
+  const travel = (paymentAmount * 0.05).toFixed(2);
 
   //calculate 60% ahorros + inversiones
   const inversiones = ((paymentAmount - forPuchium) * 0.4).toFixed(2);
@@ -19,6 +22,7 @@ const calculate = () => {
   document.getElementById("puchium").innerHTML = forPuchium;
   document.getElementById("ahorros").innerHTML = ahorros;
   document.getElementById("inversion").innerHTML = inversiones;
+  document.getElementById("viajes").innerHTML = travel;
 };
 
 document.getElementById("calcular").onclick = function calculateSavings() {
