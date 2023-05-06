@@ -6,18 +6,18 @@ const calculate = () => {
     ? (document.getElementById("papa").innerHTML = AmountToPayDad)
     : (document.getElementById("papa").innerHTML = 0);
 
-  // removing the 100 from dad
+  // removing from dad
   paymentAmount = paymentAmount - AmountToPayDad;
 
-  // calculate 35% puchium
-  const forPuchium = (paymentAmount * 0.35).toFixed(2);
+  // calculate 40% puchium
+  const forPuchium = (paymentAmount * 0.4).toFixed(2);
 
-  // calculate 5% ahorros de viaje
-  const travel = (paymentAmount * 0.05).toFixed(2);
+  // calculate 10% ahorros de viaje
+  const travel = (paymentAmount * 0.1).toFixed(2);
 
-  //calculate 60% ahorros + inversiones
-  const inversiones = ((paymentAmount - forPuchium) * 0.4).toFixed(2);
-  const ahorros = ((paymentAmount - forPuchium) * 0.6).toFixed(2);
+  //calculate 50% ahorros + inversiones
+  const inversiones = ((paymentAmount) * 0.2).toFixed(2);
+  const ahorros = ((paymentAmount) * 0.3).toFixed(2);
 
   document.getElementById("puchium").innerHTML = forPuchium;
   document.getElementById("ahorros").innerHTML = ahorros;
